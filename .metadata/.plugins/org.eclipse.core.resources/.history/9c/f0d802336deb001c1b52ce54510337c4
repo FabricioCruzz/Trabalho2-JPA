@@ -1,0 +1,13 @@
+package br.edu.univas.si5.bd2.entities;
+
+import java.util.Date;
+
+public class Candidatos {
+	
+	private Integer id;
+	private Vaga vaga;
+	private String nome;
+	private String email;
+	private Date dataNasc;
+
+}

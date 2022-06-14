@@ -1,0 +1,16 @@
+package br.edu.univas.si5.bd2.entities;
+
+import java.util.Set;
+
+public class Vaga {
+	
+	private Integer codigo;
+	private Set<Candidatos> candidatos;
+	private VagaDetalhes detalhes;
+	private String contratante;
+	
+	public Vaga() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

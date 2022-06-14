@@ -1,0 +1,22 @@
+INDEX VERSION 1.131+/home/fabricio/Documentos/Eclipse Workspace/trabalho2-BD2/.metadata/.plugins/org.eclipse.jdt.core
+4287145074.index
+797734755.index
+3943027394.index
+3082873410.index
+646308851.index
+2321146747.index
+3326219841.index
+1102228287.index
+1612279071.index
+1572635457.index
+2117033408.index
+3990620482.index
+3604774261.index
+355494769.index
+3046722375.index
+4037116375.index
+3783843920.index
+2787486668.index
+362050638.index
+2679235259.index
+2797598534.index

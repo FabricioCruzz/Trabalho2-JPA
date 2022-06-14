@@ -1,0 +1,55 @@
+package br.edu.univas.si5.bd2.entities;
+
+public class VagaDetalhes {
+	
+	private Integer codigo;
+	private Vaga vaga;
+	private String area;
+	private Float salario;
+	private String nomeVaga;
+	
+	public VagaDetalhes() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public Vaga getVaga() {
+		return vaga;
+	}
+
+	public void setVaga(Vaga vaga) {
+		this.vaga = vaga;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public Float getSalario() {
+		return salario;
+	}
+
+	public void setSalario(Float salario) {
+		this.salario = salario;
+	}
+
+	public String getNomeVaga() {
+		return nomeVaga;
+	}
+
+	public void setNomeVaga(String nomeVaga) {
+		this.nomeVaga = nomeVaga;
+	}
+	
+}

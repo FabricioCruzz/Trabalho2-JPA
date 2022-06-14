@@ -1,0 +1,46 @@
+package br.edu.univas.si5.bd2.dao;
+
+import javax.persistence.EntityManager;
+
+import br.edu.univas.si5.bd2.entities.VagaDetalhes;
+import br.edu.univas.si5.bd2.utils.HibernateUtil;
+
+public class VagaDetalhesDAO {
+	
+	private EntityManager em = HibernateUtil.getEntityManager();
+	
+	public void persistir(VagaDetalhes detalhes) {
+		em.getTransaction().begin();
+		em.persist(detalhes);
+		em.getTransaction().commit();
+	}
+	
+	public Vaga consultar(Integer primaryKey) {
+		VagaDetalhes objDet = em.find(VagaDetalhes.class, primaryKey);
+		
+		if(objDet == null) {
+			System.out.println("Não existe candidato com primaryKey. objCand é null!");
+		}
+		else {
+			System.out.println("Consulta realizada com sucesso!");
+		}
+		return objDet;
+	}
+	
+	// TODO: Implementar o UPDATE
+	
+	public void deletar(Integer primaryKey) {
+		VagaDetalhes objDet = em.find(VagaDetalhes.class, primaryKey);
+		if(objVaga != null) {
+			em.getTransaction().begin();
+			em.remove(objDet);
+			em.getTransaction().commit();
+			
+			System.out.println("Exclusão realizada com sucesso!");
+		}
+		else {
+			System.out.println("Objeto com a primaryKey: " + primaryKey + " não encontrado!");
+		}
+	}
+
+}

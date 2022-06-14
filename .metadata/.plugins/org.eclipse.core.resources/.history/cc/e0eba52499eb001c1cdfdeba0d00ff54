@@ -1,0 +1,56 @@
+package br.edu.univas.si5.bd2.runners;
+
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+
+import br.edu.univas.si5.bd2.dao.CandidatosDAO;
+import br.edu.univas.si5.bd2.dao.VagaDAO;
+import br.edu.univas.si5.bd2.dao.VagaDetalhesDAO;
+import br.edu.univas.si5.bd2.entities.Candidatos;
+import br.edu.univas.si5.bd2.entities.Vaga;
+import br.edu.univas.si5.bd2.entities.VagaDetalhes;
+import br.edu.univas.si5.bd2.utils.HibernateUtil;
+
+public class Persistencia {
+
+	public static void main(String[] args) {
+		CandidatosDAO candidatosDAO = new CandidatosDAO();
+		VagaDAO vagaDAO = new VagaDAO();
+		VagaDetalhesDAO vagaDetalhesDAO = new VagaDetalhesDAO();
+		
+		EntityManager em = HibernateUtil.getEntityManager();
+		
+		VagaDetalhes detalhes = new VagaDetalhes();
+		detalhes.setArea("Dev");
+		detalhes.setSalario(6000f);
+		detalhes.setNomeVaga("Prog");
+		
+		Vaga vaga = new Vaga();
+		vaga.setContratante("Empresa 1");
+		vaga.setDetalhes(detalhes);
+		
+//		Set<Candidatos> candidatos;
+//		candidatos.add()
+//		vaga.setCandidatos(candidatos);
+
+		Candidatos candidato = new Candidatos();
+		candidato.setNome("Pedro");
+		candidato.setEmail("pedro@mail");
+		candidato.setDataNasc(new Date());
+		candidato.setVaga(vaga);
+		
+		
+		em.getTransaction().begin();
+		em.persist(detalhes);
+		em.persist(vaga);
+		em.persist(candidato);
+		em.getTransaction().commit();
+		
+	}
+
+}
+//		vagaDetalhesDAO.persistir(detalhes);
+//		vagaDAO.persistir(vaga);
+//		candidatosDAO.persistir(candidato);
