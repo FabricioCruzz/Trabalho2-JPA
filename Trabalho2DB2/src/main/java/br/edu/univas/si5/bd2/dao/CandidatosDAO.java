@@ -19,7 +19,7 @@ public class CandidatosDAO {
 		Candidatos objCand = em.find(Candidatos.class, primaryKey);
 		
 		if(objCand == null) {
-			System.out.println("Não existe candidato com primaryKey. objCand é null!");
+			System.out.println("Não existe candidato com primaryKey " + primaryKey + ". objCand é null!");
 		}
 		else {
 			System.out.println("Consulta realizada com sucesso!");
@@ -27,7 +27,16 @@ public class CandidatosDAO {
 		return objCand;
 	}
 	
-	// TODO: Implementar o UPDATE
+	public void atualizar(Candidatos candidato) {
+		if(candidato != null) {
+			em.getTransaction().begin();
+			em.merge(candidato);
+			em.getTransaction().commit();
+		}
+		else {
+			System.out.println("Erro! Candidato é null!");
+		}
+	}
 	
 	public void deletar(Integer primaryKey) {
 		Candidatos objCand = em.find(Candidatos.class, primaryKey);

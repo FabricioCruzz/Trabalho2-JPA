@@ -1,0 +1,13 @@
+package br.edu.univas.si5.bd2.runners;
+
+import br.edu.univas.si5.bd2.dao.CandidatosDAO;
+
+public class Consulta {
+
+	public static void main(String[] args) {
+		
+		CandidatosDAO candidatosDAO = new CandidatosDAO();
+
+	}
+
+}

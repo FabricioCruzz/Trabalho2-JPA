@@ -1,0 +1,40 @@
+package br.edu.univas.si5.bd2.runners;
+
+import java.util.Date;
+
+import br.edu.univas.si5.bd2.dao.CandidatosDAO;
+import br.edu.univas.si5.bd2.dao.VagaDAO;
+import br.edu.univas.si5.bd2.dao.VagaDetalhesDAO;
+import br.edu.univas.si5.bd2.entities.Candidatos;
+import br.edu.univas.si5.bd2.entities.Vaga;
+
+public class Update {
+
+	public static void main(String[] args) {
+		
+		CandidatosDAO candidatosDAO = new CandidatosDAO();
+		int pk_Cand = 14;
+		Candidatos candidato = candidatosDAO.consultar(pk_Cand);
+		if(candidato != null) {
+			candidato.setNome("Silvia");
+			candidato.setEmail("silvia@mail.com");
+			candidato.setDataNasc(new Date());
+			candidatosDAO.atualizar(candidato);
+		}
+		
+		VagaDAO vagaDAO = new VagaDAO();
+		int pk_Vaga = 16;
+		Vaga vaga = vagaDAO.consultar(pk_Vaga);
+		if(vaga != null) {
+			vaga.setNome("Silvia");
+			vaga.setEmail("silvia@mail.com");
+			vaga.setDataNasc(new Date());
+			candidatosDAO.atualizar(vaga);
+		}
+		
+		VagaDetalhesDAO vagaDetalhesDAO = new VagaDetalhesDAO();
+		
+		
+	}
+
+}

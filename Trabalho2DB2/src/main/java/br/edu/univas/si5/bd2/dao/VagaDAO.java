@@ -19,7 +19,7 @@ public class VagaDAO {
 		Vaga objVaga = em.find(Vaga.class, primaryKey);
 		
 		if(objVaga == null) {
-			System.out.println("Não existe candidato com primaryKey. objCand é null!");
+			System.out.println("Não existe vaga com primaryKey " + primaryKey + ". objVaga é null!");
 		}
 		else {
 			System.out.println("Consulta realizada com sucesso!");
@@ -27,7 +27,16 @@ public class VagaDAO {
 		return objVaga;
 	}
 	
-	// TODO: Implementar o UPDATE
+	public void atualizar(Vaga vaga) {
+		if(vaga != null) {
+			em.getTransaction().begin();
+			em.merge(vaga);
+			em.getTransaction().commit();
+		}
+		else {
+			System.out.println("Erro! Vaga é null!");
+		}
+	}
 	
 	public void deletar(Integer primaryKey) {
 		Vaga objVaga = em.find(Vaga.class, primaryKey);

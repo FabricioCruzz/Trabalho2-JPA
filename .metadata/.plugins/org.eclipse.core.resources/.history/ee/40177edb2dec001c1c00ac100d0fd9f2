@@ -1,0 +1,28 @@
+package br.edu.univas.si5.bd2.runners;
+
+import br.edu.univas.si5.bd2.dao.CandidatosDAO;
+import br.edu.univas.si5.bd2.dao.VagaDAO;
+import br.edu.univas.si5.bd2.entities.Candidatos;
+import br.edu.univas.si5.bd2.entities.Vaga;
+import br.edu.univas.si5.bd2.entities.VagaDetalhes;
+
+public class Consulta {
+
+	public static void main(String[] args) {
+		
+		CandidatosDAO candidatosDAO = new CandidatosDAO();
+		
+		//Consultando candidatos
+		int pk_Cand = 9;
+		Candidatos candidato = candidatosDAO.consultar(pk_Cand);
+		System.out.println(candidato.toString());
+		
+		VagaDAO vagaDAO = new VagaDAO();
+		int pk_Vaga = 12;
+		Vaga vaga = new Vaga();
+		
+		VagaDetalhes detalhesDAO = new VagaDetalhes();
+		
+	}
+
+}
