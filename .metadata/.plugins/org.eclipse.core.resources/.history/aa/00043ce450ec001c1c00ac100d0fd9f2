@@ -23,7 +23,7 @@ public class Consulta {
 		//Consultando vagas
 		VagaDAO vagaDAO = new VagaDAO();
 		//Para realizar as operações verique as pk's geradas no banco pelo sequence
-		int pk_Vaga = 18;
+		int pk_Vaga = 14;
 		Vaga vaga = vagaDAO.consultar(pk_Vaga);
 		if(vaga != null) {
 			System.out.println(vaga.toString());			
@@ -32,7 +32,7 @@ public class Consulta {
 		//Consultando Detalhes da Vaga
 		VagaDetalhesDAO detalhesDAO = new VagaDetalhesDAO();
 		//Para realizar as operações verique as pk's geradas no banco pelo sequence
-		int pk_Detalhes = 20;
+		int pk_Detalhes = 19;
 		VagaDetalhes detalhes = detalhesDAO.consultar(pk_Detalhes);
 		if(detalhes != null) {
 			System.out.println(detalhes.toString());			

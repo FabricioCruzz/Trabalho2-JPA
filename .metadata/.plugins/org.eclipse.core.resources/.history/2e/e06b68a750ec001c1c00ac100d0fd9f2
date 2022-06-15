@@ -16,23 +16,27 @@ public class Persistencia {
 		VagaDAO vagaDAO = new VagaDAO();
 		VagaDetalhesDAO vagaDetalhesDAO = new VagaDetalhesDAO();
 		
-		Candidatos candidato = new Candidatos();
-		candidato.setNome("Pedro");
-		candidato.setEmail("pedro@mail.com");
-		candidato.setDataNasc(new Date());
-		
-		Vaga vaga = new Vaga();
-		vaga.setContratante("Empresa 1");
-		
-		
 		VagaDetalhes detalhes = new VagaDetalhes();
 		detalhes.setArea("Desenvolvimento");
-		detalhes.setSalario(6000f);
-		detalhes.setNomeVaga("Programador Front-End");
-		
+		detalhes.setSalario(10000f);
+		detalhes.setNomeVaga("Gerente de Projeto");
+	
 		vagaDetalhesDAO.persistir(detalhes);
+		
+		Vaga vaga = new Vaga();
+		vaga.setContratante("Empresa ABC");
+		vaga.setDetalhes(detalhes);
+		
 		vagaDAO.persistir(vaga);
+
+		Candidatos candidato = new Candidatos();
+		candidato.setNome("Ramon");
+		candidato.setEmail("ramon@mail.com");
+		candidato.setDataNasc(new Date());
+		candidato.setVaga(vaga);
+		
 		candidatosDAO.persistir(candidato);
+		
 	}
 
 }

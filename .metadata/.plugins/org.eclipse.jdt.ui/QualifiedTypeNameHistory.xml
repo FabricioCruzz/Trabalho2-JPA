@@ -11,17 +11,17 @@
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.Candidatos"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.Vaga"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.VagaDetalhes"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.CandidatosDAO"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.VagaDAO"/>
-    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.VagaDetalhesDAO"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.utils.HibernateUtil"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.VagaDAO"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.VagaDetalhesDAO"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.dao.CandidatosDAO"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.Candidatos"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.Vaga"/>
+    <fullyQualifiedTypeName name="br.edu.univas.si5.bd2.entities.VagaDetalhes"/>
 </qualifiedTypeNameHistroy>

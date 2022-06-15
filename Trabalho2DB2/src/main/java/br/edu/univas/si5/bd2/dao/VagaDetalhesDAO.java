@@ -13,6 +13,7 @@ public class VagaDetalhesDAO {
 		em.getTransaction().begin();
 		em.persist(detalhes);
 		em.getTransaction().commit();
+		System.out.println("Persistência realizada com sucesso!");
 	}
 	
 	public VagaDetalhes consultar(Integer primaryKey) {
@@ -32,6 +33,7 @@ public class VagaDetalhesDAO {
 			em.getTransaction().begin();
 			em.merge(detalhes);
 			em.getTransaction().commit();
+			System.out.println("Detalhes atualizados com sucesso!");
 		}
 		else {
 			System.out.println("Erro! Detalhes é null!");

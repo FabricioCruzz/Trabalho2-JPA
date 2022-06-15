@@ -15,11 +15,11 @@ public class Update {
 		
 		CandidatosDAO candidatosDAO = new CandidatosDAO();
 		//Para realizar as operações verique as pk's geradas no banco pelo sequence
-		int pk_Cand = 14;
+		int pk_Cand = 15;
 		Candidatos candidato = candidatosDAO.consultar(pk_Cand);
 		if(candidato != null) {
-			candidato.setNome("Silvia");
-			candidato.setEmail("silvia@mail.com");
+			candidato.setNome("Eliana");
+			candidato.setEmail("eliana@mail.com");
 			candidato.setDataNasc(new Date());
 			candidatosDAO.atualizar(candidato);
 		}
@@ -32,7 +32,7 @@ public class Update {
 		int pk_Vaga = 16;
 		Vaga vaga = vagaDAO.consultar(pk_Vaga);
 		if(vaga != null) {
-			vaga.setContratante("Empresa 4");
+			vaga.setContratante("Empresa DEF");
 			vagaDAO.atualizar(vaga);
 		}
 		else {
@@ -41,12 +41,12 @@ public class Update {
 		
 		VagaDetalhesDAO vagaDetalhesDAO = new VagaDetalhesDAO();
 		//Para realizar as operações verique as pk's geradas no banco pelo sequence
-		int pk_Detalhes = 20;
+		int pk_Detalhes = 21;
 		VagaDetalhes detalhes = vagaDetalhesDAO.consultar(pk_Detalhes);
 		if(detalhes != null) {
-			detalhes.setArea("Banco de Dados");
-			detalhes.setSalario(7000f);
-			detalhes.setNomeVaga("DBA");
+			detalhes.setArea("Infraestrutura");
+			detalhes.setSalario(1200f);
+			detalhes.setNomeVaga("Estagiário");
 			vagaDetalhesDAO.atualizar(detalhes);
 		}
 		else {

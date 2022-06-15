@@ -33,7 +33,6 @@ public class VagaDAO {
 			em.getTransaction().begin();
 			em.merge(vaga);
 			em.getTransaction().commit();
-			System.out.println("Vaga atualizada com sucesso!");
 		}
 		else {
 			System.out.println("Erro! Vaga é null!");
